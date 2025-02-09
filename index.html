@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Carolina Rojas - Desarrolladora Web Junior">
+    <title>Carolina Rojas - Desarrolladora Web</title>
+
+    <!-- Optimización de carga de CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Header compacto -->
+    <nav class="compact-header fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-xl font-bold gradient-text">CR</h1>
+
+            <div class="flex items-center space-x-4">
+                <!-- Navegación principal -->
+                <div class="hidden md:flex space-x-4">
+                    
+                    <a href="#sobre-mi" class="text-sm hover:text-pink-500 transition-colors">Sobre Mí</a>
+                    <a href="#habilidades" class="text-sm hover:text-pink-500 transition-colors">Habilidades</a>
+                    <a href="#proyectos" class="text-sm hover:text-pink-500 transition-colors">Proyectos</a>
+                    <a href="#contacto" class="text-sm hover:text-pink-500 transition-colors">Contacto</a>
+                </div>
+
+                <!-- Toggle de tema -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Menú móvil -->
+                <button class="md:hidden text-current" id="mobile-menu-button" aria-label="Menú">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil desplegable -->
+        <div class="mobile-menu md:hidden bg-[var(--bg-primary)]" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2">
+               
+                <a href="#sobre-mi" class="block hover:text-pink-500 transition-colors py-2">Sobre Mí</a>
+                <a href="#habilidades" class="block hover:text-pink-500 transition-colors py-2">Habilidades</a>
+                <a href="#proyectos" class="block hover:text-pink-500 transition-colors py-2">Proyectos</a>
+                <a href="#contacto" class="block hover:text-pink-500 transition-colors py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-[60px]">
+
+        <!-- Hero section con imagen arriba -->
+        <section class="hero-section">
+            <div class="container mx-auto px-4 text-center">
+                <!-- Imagen primero, con tamaño ajustado -->
+                <img src="./img/IMG_20230611_134356.jpg" alt="Carolina Rojas"
+                    class="profile-image rounded-full mx-auto border-4 border-white shadow-xl w-40 h-40 object-cover"
+                    loading="lazy">
+
+                <!-- Nombre y título debajo de la imagen -->
+                <div class="mt-20"> <!-- Añadido margen para compensar el translateY de la imagen -->
+                    <h1 class="text-3xl font-bold mb-1 text-white">Carolina Rojas Collante</h1>
+                    <p class="text-xl text-white opacity-90 mb-12">Desarrolladora Web Junior</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre-mi" class="about-section py-12">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Sobre Mí</h2>
+                <div class="content">
+                    <p class="text-lg">
+                        Soy una desarrolladora web junior apasionada por crear soluciones tecnológicas innovadoras.
+                        Resido en Concepción, Paraguay, y me especializo en el desarrollo tanto frontend como backend.
+                        Mi objetivo es seguir creciendo profesionalmente mientras aporto valor a proyectos desafiantes
+                        utilizando las últimas tecnologías web.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="habilidades" class="py-16 alt">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+                    <!-- Frontend -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                        <div class="text-pink-500 text-4xl mb-6"><i class="fas fa-code"></i></div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Frontend</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="fab fa-html5 text-orange-500 mr-2"></i>HTML5</li>
+                            <li class="flex items-center"><i class="fab fa-css3-alt text-blue-500 mr-2"></i>CSS3</li>
+                            <li class="flex items-center"><i class="fab fa-js text-yellow-500 mr-2"></i>JavaScript</li>
+                            <li class="flex items-center"><i class="fab fa-react text-blue-400 mr-2"></i>React</li>
+                            <li class="flex items-center"><i class="fab fa-angular text-red-600 mr-2"></i>Angular</li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                        <div class="text-purple-500 text-4xl mb-6"><i class="fas fa-server"></i></div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Backend</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="fab fa-php text-indigo-600 mr-2"></i>PHP</li>
+                            <li class="flex items-center"><i class="fab fa-node text-green-600 mr-2"></i>Node.js</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bases de Datos -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                        <div class="text-indigo-500 text-4xl mb-6"><i class="fas fa-database"></i></div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Bases de Datos</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-database text-blue-500 mr-2"></i>MySQL</li>
+                            <li class="flex items-center"><i class="fas fa-database text-blue-700 mr-2"></i>PostgreSQL
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-database text-orange-500 mr-2"></i>SQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Herramientas -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
+                        <div class="text-green-500 text-4xl mb-6"><i class="fas fa-tools"></i></div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Herramientas</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-code-branch text-gray-700 mr-2"></i>Git</li>
+                            <li class="flex items-center"><i class="fas fa-paper-plane text-orange-500 mr-2"></i>Postman
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Proyectos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                    <!-- Project 1 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <img src="./img/pelu.jpg" alt="Proyecto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">Plataforma de comercio electrónico desarrollada con React y
+                                Node.js</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                                <span
+                                    class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
+                            </div>
+                            <a href="https://github.com/carolrojascoll/sistempelu"
+                                class="text-pink-500 hover:text-pink-600 font-medium">Ver proyecto →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <img src="./img/blog.jpg" alt="Proyecto 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Task Manager</h3>
+                            <p class="text-gray-600 mb-4">Aplicación de gestión de tareas con Angular y Firebase</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Angular</span>
+                                <span
+                                    class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Firebase</span>
+                                <span
+                                    class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">TypeScript</span>
+                            </div>
+                            <a href="https://github.com/carolrojascoll/BlogCafe"
+                                class="text-pink-500 hover:text-pink-600 font-medium">Ver proyecto →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <img src="./img/tienda.jpg" alt="Proyecto 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Blog Personal</h3>
+                            <p class="text-gray-600 mb-4">Blog desarrollado con PHP y MySQL</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">MySQL</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/carolrojascoll/Tienda"
+                                class="text-pink-500 hover:text-pink-600 font-medium">Ver proyecto →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+<section id="contacto" class="py-16 alt">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Contacto</h2>
+
+        <!-- Email -->
+        <div class="flex justify-center items-center space-x-2 text-lg text-gray-800 mb-6">
+            <i class="fas fa-envelope text-pink-500"></i>
+            <a href="mailto:carolirojas73@gmail.com" class="hover:text-pink-500">
+                carolirojas73@gmail.com
+            </a>
+        </div>
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.facebook.com/profile.php?id=100073695368889" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="w-10 h-10">
+            </a>
+            <a href="https://www.instagram.com/rojas.c__/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-10 h-10">
+            </a>
+            <a href="https://www.linkedin.com/in/carolina-rojas-collante" target="_blank" 
+            rel="noopener noreferrer"
+            class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition-colors"
+            aria-label="LinkedIn">
+             <i class="fab fa-linkedin-in text-xl"></i>
+         </a>
+         
+         <a href="https://github.com/carolrojascoll" target="_blank" 
+            rel="noopener noreferrer"
+            class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition-colors"
+            aria-label="GitHub">
+             <i class="fab fa-github text-xl"></i>
+         </a>
+            <a href="https://wa.me/qr/KS6TAW3GRTGZG1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-10 h-10">
+            </a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-[var(--border-color)]">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-[var(--text-secondary)]">© 2025 Carolina Rojas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

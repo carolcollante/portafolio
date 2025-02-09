@@ -1,0 +1,114 @@
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7fafc;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --border-color: #e2e8f0;
+}
+
+html.dark {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+    --border-color: #4a5568;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para secciones */
+section {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+section.alt {
+    background-color: var(--bg-secondary);
+}
+
+/* Header compacto */
+.compact-header {
+    background: var(--bg-primary);
+    height: 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Hero section reducida */
+.hero-section {
+    background: linear-gradient(45deg, #9333ea, #7c3aed);
+    padding: 2rem 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* Cards y contenedores */
+.card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+/* Resto de estilos existentes */
+.gradient-text {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+ /* Ajuste para la imagen */
+ .profile-image {
+    margin-top: 5rem;
+    transform: translateY(50%);
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu.active {
+    max-height: 300px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Hero section ajustado */
+.hero-section {
+    background: linear-gradient(45deg, #9333ea, #7c3aed);
+    padding: 1rem 0 4rem;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+.about-section {
+    max-width: 720px; /* Limita el ancho de la sección */
+    margin: 0 auto; /* Centra la sección */
+    padding: 3rem 1rem; /* Espaciado vertical más compacto */
+    text-align: center; /* Asegura alineación central en móviles */
+}
+
+.about-section .content {
+    text-align: left; /* Para que el texto no esté completamente centrado */
+}
+
+@media (min-width: 768px) {
+    .about-section .content {
+        text-align: left; /* Alineación a la izquierda en pantallas grandes */
+    }
+}
